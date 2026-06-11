@@ -2,17 +2,24 @@
 
 - type: github
   icon: "fab fa-github"
-
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+  url: "https://github.com/OrindaAudit"
 
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
+  url: "mailto:johan.micoud@hotmail.com"
 
 - type: rss
   icon: "fas fa-rss"
   noblank: true
+
+- type: xiaohongshu
+  icon: "fas fa-book"
+  url: "https://www.xiaohongshu.com/user/profile/6844612a000000001b0220e1"
+
+- type: wechat
+  icon: "fab fa-weixin"
+  url: "/notes/wechat/"
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
