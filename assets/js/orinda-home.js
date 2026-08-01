@@ -22,14 +22,30 @@
     });
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  let scrollFrame = null;
 
-    if (visible) setActive(visible.target.id);
-  }, { rootMargin: '-18% 0px -58% 0px', threshold: [0.05, 0.2, 0.5] });
+  const updateActiveSection = () => {
+    const marker = window.innerHeight * 0.36;
+    let current = sections.reduce((closest, section) => {
+      const distance = Math.abs(section.getBoundingClientRect().top - marker);
+      const closestDistance = Math.abs(closest.getBoundingClientRect().top - marker);
+      return distance < closestDistance ? section : closest;
+    }, sections[0]);
 
-  sections.forEach((section) => observer.observe(section));
+    const atPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+    if (atPageEnd) current = sections[sections.length - 1];
+
+    if (current) setActive(current.id);
+    scrollFrame = null;
+  };
+
+  const scheduleUpdate = () => {
+    if (scrollFrame !== null) return;
+    scrollFrame = window.requestAnimationFrame(updateActiveSection);
+  };
+
+  window.addEventListener('scroll', scheduleUpdate, { passive: true });
+  window.addEventListener('resize', scheduleUpdate, { passive: true });
+  updateActiveSection();
 })();
 

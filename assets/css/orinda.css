@@ -56,7 +56,9 @@ html[data-bs-theme="dark"] {
 }
 
 body {
-  overflow-x: hidden;
+  /* `hidden` creates a scroll container and prevents the sticky profile from
+     staying attached to the viewport. `clip` keeps the crop without that side effect. */
+  overflow-x: clip;
   color: var(--orinda-body);
   background: var(--orinda-bg);
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -191,6 +193,7 @@ body:has(.orinda-home) main {
   display: flex;
   height: 100vh;
   padding: clamp(4.5rem, 9vh, 6.5rem) 0 3.5rem;
+  align-self: start;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -647,7 +650,7 @@ body:has(.orinda-home) main {
   color: var(--orinda-accent);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .orinda-shell {
     display: block;
     width: min(100% - 3rem, 720px);
