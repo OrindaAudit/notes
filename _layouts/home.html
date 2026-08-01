@@ -1,0 +1,128 @@
+---
+layout: default
+---
+
+<div class="orinda-home">
+  <section class="orinda-hero" aria-labelledby="orinda-hero-title">
+    <div>
+      <p class="orinda-eyebrow">Orinda Audit · Research &amp; Practice</p>
+      <h1 id="orinda-hero-title">审计数智化<br>研究与实践</h1>
+      <p class="lead">探索人工智能、智能体与信息技术如何重塑审计方法、工作流程与专业判断，把研究沉淀为可以进入审计现场的工具与方法。</p>
+      <ul class="orinda-credentials" aria-label="专业资质">
+        <li>CPA</li>
+        <li>CISA</li>
+        <li>CIA</li>
+        <li>高级会计师</li>
+      </ul>
+      <div class="orinda-actions">
+        <a class="orinda-button" href="{{ '/research/' | relative_url }}">浏览研究方向</a>
+        <a class="orinda-button is-secondary" href="{{ '/tools/' | relative_url }}">查看工具实践</a>
+      </div>
+    </div>
+
+    <aside class="orinda-focus" aria-label="当前关注方向">
+      <p class="orinda-focus-title">Current focus</p>
+      <div class="orinda-focus-item"><span>01</span><strong>审计智能体</strong></div>
+      <div class="orinda-focus-item"><span>02</span><strong>AI 审计治理</strong></div>
+      <div class="orinda-focus-item"><span>03</span><strong>信息系统审计</strong></div>
+      <div class="orinda-focus-item"><span>04</span><strong>事务所数智化转型</strong></div>
+    </aside>
+  </section>
+
+  <section class="orinda-section" aria-labelledby="research-title">
+    <div class="orinda-section-head">
+      <div>
+        <p class="orinda-section-kicker">Research</p>
+        <h2 id="research-title">从专业问题出发，而不是从技术名词出发</h2>
+      </div>
+      <a class="orinda-text-link" href="{{ '/research/' | relative_url }}">全部研究方向 →</a>
+    </div>
+    <p class="orinda-section-copy">围绕审计质量、效率、治理与职业判断，持续研究新技术进入审计业务后的机制、边界和可落地路径。</p>
+
+    <div class="orinda-grid mt-4">
+      <a class="orinda-card" href="{{ '/research/#audit-agent' | relative_url }}">
+        <span class="orinda-card-number">R / 01</span>
+        <h3>审计智能体</h3>
+        <p>研究智能体在风险识别、程序设计、证据整理与底稿复核中的协作模式。</p>
+      </a>
+      <a class="orinda-card" href="{{ '/research/#ai-governance' | relative_url }}">
+        <span class="orinda-card-number">R / 02</span>
+        <h3>AI 审计治理</h3>
+        <p>关注数据安全、模型幻觉、算法偏差、责任边界与可追溯性。</p>
+      </a>
+      <a class="orinda-card" href="{{ '/research/#it-audit' | relative_url }}">
+        <span class="orinda-card-number">R / 03</span>
+        <h3>信息系统审计</h3>
+        <p>连接业务流程、信息系统控制、数据可靠性与财务报表审计。</p>
+      </a>
+      <a class="orinda-card" href="{{ '/research/#transformation' | relative_url }}">
+        <span class="orinda-card-number">R / 04</span>
+        <h3>数智化转型</h3>
+        <p>讨论会计师事务所从工具应用走向组织、流程和能力体系变革的路径。</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="orinda-section" aria-labelledby="tools-title">
+    <div class="orinda-section-head">
+      <div>
+        <p class="orinda-section-kicker">Tools</p>
+        <h2 id="tools-title">把方法做成工具</h2>
+      </div>
+      <a class="orinda-text-link" href="{{ '/tools/' | relative_url }}">工具与项目 →</a>
+    </div>
+
+    <div class="orinda-tool-grid">
+      <a class="orinda-tool" href="https://github.com/OrindaAudit/GTPS_Translator" target="_blank" rel="noopener noreferrer">
+        <span class="orinda-tool-icon"><i class="fas fa-language" aria-hidden="true"></i></span>
+        <h3>GTPS Translator</h3>
+        <p>面向专业资料的桌面翻译工具，让审计与技术文档处理更高效。</p>
+      </a>
+      <a class="orinda-tool" href="https://github.com/OrindaAudit/audit-digest" target="_blank" rel="noopener noreferrer">
+        <span class="orinda-tool-icon"><i class="fas fa-newspaper" aria-hidden="true"></i></span>
+        <h3>Audit Digest</h3>
+        <p>以自动化方式汇集、整理与输出审计领域的信息内容。</p>
+      </a>
+      <a class="orinda-tool" href="https://github.com/OrindaAudit" target="_blank" rel="noopener noreferrer">
+        <span class="orinda-tool-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+        <h3>Open-source Lab</h3>
+        <p>持续公开审计数智化相关实验、原型与工作流。</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="orinda-section" aria-labelledby="articles-title">
+    <div class="orinda-section-head">
+      <div>
+        <p class="orinda-section-kicker">Latest writing</p>
+        <h2 id="articles-title">最新文章</h2>
+      </div>
+      <a class="orinda-text-link" href="{{ '/articles/' | relative_url }}">浏览全部文章 →</a>
+    </div>
+
+    <div class="orinda-post-list">
+      {% for post in site.posts limit: 3 %}
+        <a class="orinda-post" href="{{ post.url | relative_url }}">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+          <div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+          </div>
+          <span class="orinda-post-arrow" aria-hidden="true">↗</span>
+        </a>
+      {% else %}
+        <p>文章正在整理中。</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="orinda-cta" aria-labelledby="contact-title">
+    <div>
+      <p class="orinda-section-kicker">Contact</p>
+      <h2 id="contact-title">一起讨论审计的下一种工作方式</h2>
+      <p>欢迎就审计数智化研究、技术应用与行业实践进行交流。</p>
+    </div>
+    <a class="orinda-button" href="{{ '/contact/' | relative_url }}">联系与合作</a>
+  </section>
+</div>
+

@@ -1,0 +1,489 @@
+---
+---
+
+:root {
+  --orinda-ink: #222722;
+  --orinda-muted: #657066;
+  --orinda-green: #7f927f;
+  --orinda-green-deep: #2e3a31;
+  --orinda-sand: #c89b6d;
+  --orinda-paper: #faf9f6;
+  --orinda-card: #ffffff;
+  --orinda-line: #e6e1d8;
+}
+
+html[data-bs-theme="light"] body {
+  background: var(--orinda-paper);
+  color: var(--orinda-ink);
+}
+
+#sidebar {
+  background: var(--orinda-green-deep);
+}
+
+#sidebar .site-title,
+#sidebar .nav-link,
+#sidebar .sidebar-bottom a {
+  color: #f8f5ed;
+}
+
+#sidebar .site-subtitle {
+  color: #c8d0c7;
+  font-style: normal !important;
+  line-height: 1.65;
+}
+
+#sidebar .nav-item.active .nav-link {
+  color: #ffffff;
+  background: rgba(200, 155, 109, 0.2);
+}
+
+#sidebar .nav-link:hover,
+#sidebar .sidebar-bottom a:hover {
+  color: #e8c59f;
+}
+
+#sidebar #avatar {
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.06);
+}
+
+main:has(.orinda-home) {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.row:has(.orinda-home) #panel-wrapper {
+  display: none;
+}
+
+.orinda-home {
+  --orinda-radius: 22px;
+  width: 100%;
+  padding: 0 0 3rem;
+}
+
+.orinda-home a {
+  text-decoration: none;
+}
+
+.orinda-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(250px, 0.75fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(2.5rem, 6vw, 5.5rem);
+  border: 1px solid var(--orinda-line);
+  border-radius: calc(var(--orinda-radius) + 6px);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(200, 155, 109, 0.22), transparent 32%),
+    linear-gradient(135deg, #f4f1e9 0%, #fbfaf7 65%);
+}
+
+.orinda-hero::after {
+  position: absolute;
+  right: -8rem;
+  bottom: -10rem;
+  width: 24rem;
+  height: 24rem;
+  border: 1px solid rgba(127, 146, 127, 0.22);
+  border-radius: 50%;
+  content: "";
+}
+
+.orinda-eyebrow,
+.orinda-section-kicker {
+  margin: 0 0 1rem;
+  color: var(--orinda-green);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.orinda-hero h1 {
+  max-width: 720px;
+  margin: 0;
+  color: var(--orinda-ink);
+  font-size: clamp(2.35rem, 5.8vw, 4.8rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.06;
+}
+
+.orinda-hero .lead {
+  max-width: 680px;
+  margin: 1.5rem 0 0;
+  color: var(--orinda-muted);
+  font-size: clamp(1rem, 2vw, 1.16rem);
+  line-height: 1.9;
+}
+
+.orinda-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.orinda-credentials li {
+  padding: 0.34rem 0.7rem;
+  border: 1px solid #d9d3c9;
+  border-radius: 999px;
+  color: #465046;
+  background: rgba(255, 255, 255, 0.56);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.orinda-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.orinda-button {
+  display: inline-flex;
+  min-height: 46px;
+  padding: 0.72rem 1.15rem;
+  border: 1px solid var(--orinda-green-deep);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  color: #fff !important;
+  background: var(--orinda-green-deep);
+  font-weight: 650;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.orinda-button.is-secondary {
+  color: var(--orinda-green-deep) !important;
+  background: transparent;
+}
+
+.orinda-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(46, 58, 49, 0.14);
+}
+
+.orinda-focus {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  border-radius: var(--orinda-radius);
+  color: #f7f5ef;
+  background: var(--orinda-green-deep);
+  box-shadow: 0 24px 60px rgba(46, 58, 49, 0.18);
+}
+
+.orinda-focus-title {
+  margin: 0 0 1rem;
+  color: #d9e0d7;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.orinda-focus-item {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0.75rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.orinda-focus-item span {
+  color: var(--orinda-sand);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.orinda-focus-item strong {
+  color: #ffffff;
+  font-size: 0.96rem;
+  font-weight: 560;
+}
+
+.orinda-section {
+  padding: clamp(3.5rem, 7vw, 6.5rem) 0 0;
+}
+
+.orinda-section-head {
+  display: flex;
+  gap: 2rem;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.orinda-section h2 {
+  margin: 0;
+  color: var(--orinda-ink);
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
+  letter-spacing: -0.025em;
+}
+
+.orinda-section-copy {
+  max-width: 580px;
+  margin: 0;
+  color: var(--orinda-muted);
+  line-height: 1.8;
+}
+
+.orinda-text-link {
+  flex: none;
+  color: var(--orinda-green-deep) !important;
+  font-weight: 650;
+}
+
+.orinda-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.orinda-card {
+  min-height: 220px;
+  padding: 1.6rem;
+  border: 1px solid var(--orinda-line);
+  border-radius: var(--orinda-radius);
+  color: var(--orinda-ink) !important;
+  background: var(--orinda-card);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.orinda-card:hover {
+  transform: translateY(-3px);
+  border-color: #cfc5b6;
+  box-shadow: 0 16px 38px rgba(56, 58, 50, 0.08);
+}
+
+.orinda-card-number {
+  display: block;
+  margin-bottom: 2.3rem;
+  color: var(--orinda-sand);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.orinda-card h3 {
+  margin: 0 0 0.55rem;
+  color: var(--orinda-ink);
+  font-size: 1.2rem;
+}
+
+.orinda-card p {
+  margin: 0;
+  color: var(--orinda-muted);
+  line-height: 1.75;
+}
+
+.orinda-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.orinda-tool {
+  display: flex;
+  min-height: 250px;
+  padding: 1.6rem;
+  border-radius: var(--orinda-radius);
+  flex-direction: column;
+  color: #f8f5ef !important;
+  background: var(--orinda-green-deep);
+}
+
+.orinda-tool:nth-child(2) {
+  color: var(--orinda-ink) !important;
+  background: #e9e4d9;
+}
+
+.orinda-tool:nth-child(3) {
+  color: var(--orinda-ink) !important;
+  background: #dce3da;
+}
+
+.orinda-tool-icon {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-bottom: auto;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  place-items: center;
+  opacity: 0.82;
+}
+
+.orinda-tool h3 {
+  margin: 2rem 0 0.55rem;
+  color: inherit;
+  font-size: 1.14rem;
+}
+
+.orinda-tool p {
+  margin: 0;
+  color: inherit;
+  line-height: 1.7;
+  opacity: 0.76;
+}
+
+.orinda-post-list {
+  border-top: 1px solid var(--orinda-line);
+}
+
+.orinda-post {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.45rem 0;
+  border-bottom: 1px solid var(--orinda-line);
+  color: var(--orinda-ink) !important;
+}
+
+.orinda-post time {
+  color: var(--orinda-muted);
+  font-size: 0.82rem;
+}
+
+.orinda-post h3 {
+  margin: 0 0 0.35rem;
+  color: var(--orinda-ink);
+  font-size: 1.08rem;
+}
+
+.orinda-post p {
+  margin: 0;
+  color: var(--orinda-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.orinda-post-arrow {
+  color: var(--orinda-sand);
+  font-size: 1.2rem;
+}
+
+.orinda-cta {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: clamp(3.5rem, 7vw, 6.5rem);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border-radius: calc(var(--orinda-radius) + 4px);
+  color: #fff;
+  background: var(--orinda-green-deep);
+}
+
+.orinda-cta h2 {
+  margin: 0 0 0.55rem;
+  color: #fff;
+}
+
+.orinda-cta p {
+  max-width: 640px;
+  margin: 0;
+  color: #ccd4cb;
+  line-height: 1.75;
+}
+
+.orinda-cta .orinda-button {
+  flex: none;
+  border-color: #e7c5a2;
+  color: var(--orinda-green-deep) !important;
+  background: #e7c5a2;
+}
+
+.orinda-page-intro {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 0 2rem;
+  border-bottom: 1px solid var(--orinda-line);
+  color: var(--orinda-muted);
+  font-size: 1.06rem;
+  line-height: 1.9;
+}
+
+.orinda-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2.5rem;
+}
+
+.orinda-page-card {
+  padding: 1.4rem;
+  border: 1px solid var(--orinda-line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.orinda-page-card h2,
+.orinda-page-card h3 {
+  margin-top: 0;
+}
+
+.orinda-page-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1199px) {
+  main:has(.orinda-home) {
+    flex-basis: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .orinda-hero,
+  .orinda-tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orinda-focus {
+    max-width: 520px;
+  }
+
+  .orinda-tool {
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 640px) {
+  .orinda-hero {
+    padding: 2rem 1.35rem;
+  }
+
+  .orinda-grid,
+  .orinda-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orinda-section-head,
+  .orinda-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .orinda-post {
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+  }
+
+  .orinda-post time {
+    grid-column: 1 / -1;
+  }
+
+  .orinda-cta .orinda-button {
+    width: 100%;
+  }
+}
+

@@ -14,12 +14,12 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Orinda Notes # the main title
+title: Orinda Audit # the main title
 
-tagline: IT技术审计行业应用所思所想 # it will display as the subtitle
+tagline: 审计数智化研究与实践 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  审计智能体与数字审计探索
+  聚焦审计智能体、AI审计治理、信息系统审计与会计师事务所数智化转型的研究与实践平台。
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -34,7 +34,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Orinda
+  name: Orinda Audit
   email: johan.micoud@hotmail.com # change to your email address
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
