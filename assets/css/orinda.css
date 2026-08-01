@@ -2,412 +2,589 @@
 ---
 
 :root {
-  --orinda-ink: #222722;
-  --orinda-muted: #657066;
-  --orinda-green: #7f927f;
-  --orinda-green-deep: #2e3a31;
-  --orinda-sand: #c89b6d;
-  --orinda-paper: #faf9f6;
-  --orinda-card: #ffffff;
-  --orinda-line: #e6e1d8;
+  --orinda-bg: #0d0715;
+  --orinda-surface: #160d25;
+  --orinda-elevated: #1d1230;
+  --orinda-text: #eee8f7;
+  --orinda-body: #ada2bd;
+  --orinda-muted: #756b85;
+  --orinda-accent: #c084fc;
+  --orinda-accent-bright: #d8b4fe;
+  --orinda-accent-soft: rgba(168, 85, 247, 0.14);
+  --orinda-line: rgba(216, 180, 254, 0.12);
+  --orinda-shadow: rgba(2, 0, 8, 0.36);
 }
 
-html[data-bs-theme="light"] body {
-  background: var(--orinda-paper);
-  color: var(--orinda-ink);
+html {
+  scroll-behavior: smooth;
+}
+
+html[data-bs-theme="dark"] {
+  --main-bg: var(--orinda-bg);
+  --mask-bg: rgba(13, 7, 21, 0.88);
+  --main-border-color: var(--orinda-line);
+  --text-color: var(--orinda-body);
+  --text-muted-color: var(--orinda-muted);
+  --heading-color: var(--orinda-text);
+  --label-color: var(--orinda-body);
+  --blockquote-border-color: var(--orinda-accent);
+  --blockquote-text-color: var(--orinda-body);
+  --link-color: var(--orinda-accent-bright);
+  --link-underline-color: rgba(192, 132, 252, 0.35);
+  --button-bg: var(--orinda-elevated);
+  --btn-border-color: var(--orinda-line);
+  --sidebar-bg: #10091b;
+  --sidebar-muted-color: var(--orinda-muted);
+  --sidebar-active-color: var(--orinda-accent-bright);
+  --sidebar-hover-bg: var(--orinda-accent-soft);
+  --topbar-bg: rgba(13, 7, 21, 0.86);
+  --search-border-color: var(--orinda-line);
+  --search-icon-color: var(--orinda-muted);
+  --input-focus-border-color: var(--orinda-accent);
+  --card-bg: var(--orinda-surface);
+  --card-hover-bg: var(--orinda-elevated);
+  --card-shadow: 0 16px 40px var(--orinda-shadow);
+  --tag-border: var(--orinda-line);
+  --tag-shadow: none;
+  --tag-hover: var(--orinda-accent-soft);
+  --toc-highlight: var(--orinda-accent);
+  --toc-popup-border-color: var(--orinda-line);
+  --btn-share-color: var(--orinda-body);
+  --btn-share-hover-color: var(--orinda-accent-bright);
+  --kbd-wrap-color: var(--orinda-elevated);
+  --kbd-text-color: var(--orinda-text);
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--orinda-body);
+  background: var(--orinda-bg);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+::selection {
+  color: var(--orinda-text);
+  background: rgba(168, 85, 247, 0.42);
+}
+
+a {
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
 
 #sidebar {
-  background: var(--orinda-green-deep);
+  border-right: 1px solid var(--orinda-line);
+  background: #10091b;
 }
 
 #sidebar .site-title,
 #sidebar .nav-link,
 #sidebar .sidebar-bottom a {
-  color: #f8f5ed;
+  color: var(--orinda-text);
 }
 
 #sidebar .site-subtitle {
-  color: #c8d0c7;
+  color: var(--orinda-muted);
   font-style: normal !important;
   line-height: 1.65;
 }
 
 #sidebar .nav-item.active .nav-link {
-  color: #ffffff;
-  background: rgba(200, 155, 109, 0.2);
+  color: var(--orinda-accent-bright);
+  background: var(--orinda-accent-soft);
 }
 
 #sidebar .nav-link:hover,
 #sidebar .sidebar-bottom a:hover {
-  color: #e8c59f;
+  color: var(--orinda-accent-bright);
 }
 
 #sidebar #avatar {
-  border: 2px solid rgba(255, 255, 255, 0.72);
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(216, 180, 254, 0.52);
+  box-shadow: 0 0 0 6px rgba(168, 85, 247, 0.08);
 }
 
-main:has(.orinda-home) {
-  flex: 0 0 100%;
-  max-width: 100%;
+#topbar-wrapper {
+  border-bottom: 1px solid var(--orinda-line);
+  backdrop-filter: blur(16px);
 }
 
-.row:has(.orinda-home) #panel-wrapper {
-  display: none;
+.content a:not(.orinda-row, .orinda-project, .orinda-writing, .orinda-outline-button) {
+  color: var(--orinda-accent-bright);
+}
+
+.card,
+.post-preview {
+  border-color: var(--orinda-line);
+  background: var(--orinda-surface);
+}
+
+/* The homepage uses a portfolio shell instead of Chirpy's article chrome. */
+body:has(.orinda-home) #sidebar,
+body:has(.orinda-home) #topbar-wrapper,
+body:has(.orinda-home) #panel-wrapper,
+body:has(.orinda-home) #tail-wrapper,
+body:has(.orinda-home) #back-to-top {
+  display: none !important;
+}
+
+body:has(.orinda-home) #main-wrapper {
+  display: block;
+  margin-left: 0 !important;
+  transform: none !important;
+  background: var(--orinda-bg);
+}
+
+body:has(.orinda-home) #main-wrapper > .container {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+body:has(.orinda-home) #main-wrapper > .container > .row {
+  display: block;
+  margin: 0;
+}
+
+body:has(.orinda-home) main {
+  width: 100%;
+  max-width: none;
+  padding: 0 !important;
+  flex: none;
 }
 
 .orinda-home {
-  --orinda-radius: 22px;
-  width: 100%;
-  padding: 0 0 3rem;
+  --glow-x: 72vw;
+  --glow-y: 18vh;
+  position: relative;
+  min-height: 100vh;
+  color: var(--orinda-body);
+  background:
+    radial-gradient(circle at 12% 6%, rgba(126, 34, 206, 0.08), transparent 30rem),
+    var(--orinda-bg);
 }
 
 .orinda-home a {
+  color: inherit;
   text-decoration: none;
 }
 
-.orinda-hero {
+.orinda-home__glow {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(560px circle at var(--glow-x) var(--glow-y), rgba(147, 51, 234, 0.10), transparent 74%);
+}
+
+.orinda-shell {
   position: relative;
-  overflow: hidden;
+  z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(250px, 0.75fr);
-  gap: clamp(2rem, 5vw, 5rem);
-  align-items: center;
-  padding: clamp(2.5rem, 6vw, 5.5rem);
-  border: 1px solid var(--orinda-line);
-  border-radius: calc(var(--orinda-radius) + 6px);
-  background:
-    radial-gradient(circle at 90% 10%, rgba(200, 155, 109, 0.22), transparent 32%),
-    linear-gradient(135deg, #f4f1e9 0%, #fbfaf7 65%);
+  width: min(100% - 4rem, 1220px);
+  margin: 0 auto;
+  grid-template-columns: minmax(300px, 0.86fr) minmax(0, 1.14fr);
+  gap: clamp(4rem, 8vw, 7.5rem);
 }
 
-.orinda-hero::after {
-  position: absolute;
-  right: -8rem;
-  bottom: -10rem;
-  width: 24rem;
-  height: 24rem;
-  border: 1px solid rgba(127, 146, 127, 0.22);
-  border-radius: 50%;
-  content: "";
+.orinda-profile {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100vh;
+  padding: clamp(4.5rem, 9vh, 6.5rem) 0 3.5rem;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.orinda-eyebrow,
-.orinda-section-kicker {
-  margin: 0 0 1rem;
-  color: var(--orinda-green);
-  font-size: 0.76rem;
+.orinda-monogram {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(216, 180, 254, 0.52);
+  border-radius: 0.8rem;
+  place-items: center;
+  color: var(--orinda-accent-bright) !important;
+  background: rgba(168, 85, 247, 0.07);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 28px rgba(147, 51, 234, 0.08);
+}
+
+.orinda-monogram:hover {
+  border-color: var(--orinda-accent-bright);
+  background: var(--orinda-accent-soft);
+}
+
+.orinda-profile h1 {
+  margin: 0;
+  color: var(--orinda-text);
+  font-size: clamp(2.65rem, 5vw, 3.75rem);
+  font-weight: 730;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.orinda-profile h2 {
+  margin: 1rem 0 0;
+  color: var(--orinda-text);
+  font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+  font-weight: 580;
+  letter-spacing: -0.015em;
+}
+
+.orinda-profile__intro {
+  max-width: 26rem;
+  margin: 1.15rem 0 0;
+  color: var(--orinda-body);
+  line-height: 1.8;
+}
+
+.orinda-anchor-nav {
+  display: flex;
+  margin-top: clamp(3.2rem, 8vh, 5.2rem);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.orinda-anchor-nav a {
+  display: flex;
+  min-height: 2.45rem;
+  align-items: center;
+  color: var(--orinda-muted);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
-.orinda-hero h1 {
-  max-width: 720px;
-  margin: 0;
-  color: var(--orinda-ink);
-  font-size: clamp(2.35rem, 5.8vw, 4.8rem);
-  font-weight: 650;
-  letter-spacing: -0.045em;
-  line-height: 1.06;
+.orinda-anchor-nav span {
+  width: 1.8rem;
+  color: var(--orinda-accent);
+  font-size: 0.62rem;
 }
 
-.orinda-hero .lead {
-  max-width: 680px;
-  margin: 1.5rem 0 0;
+.orinda-anchor-nav i {
+  width: 2rem;
+  height: 1px;
+  margin-right: 0.9rem;
+  background: var(--orinda-muted);
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.orinda-anchor-nav a:hover,
+.orinda-anchor-nav a.is-active {
+  color: var(--orinda-text);
+}
+
+.orinda-anchor-nav a:hover i,
+.orinda-anchor-nav a.is-active i {
+  width: 4rem;
+  background: var(--orinda-accent-bright);
+}
+
+.orinda-socials {
+  display: flex;
+  gap: 1.35rem;
+}
+
+.orinda-socials a {
   color: var(--orinda-muted);
-  font-size: clamp(1rem, 2vw, 1.16rem);
+  font-size: 1.28rem;
+}
+
+.orinda-socials a:hover {
+  color: var(--orinda-accent-bright);
+  transform: translateY(-2px);
+}
+
+.orinda-home__content {
+  min-width: 0;
+}
+
+.orinda-portfolio-section {
+  padding: clamp(5rem, 11vh, 7.5rem) 0;
+  scroll-margin-top: 1rem;
+}
+
+.orinda-portfolio-section:first-child {
+  display: flex;
+  min-height: 100vh;
+  padding-top: clamp(5rem, 12vh, 8rem);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.orinda-mobile-label {
+  display: none;
+  color: var(--orinda-text);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.orinda-mobile-label span {
+  color: var(--orinda-accent);
+}
+
+.orinda-prose p {
+  margin: 0 0 1.35rem;
+  color: var(--orinda-body);
+  font-size: clamp(1rem, 1.35vw, 1.08rem);
   line-height: 1.9;
 }
 
-.orinda-credentials {
+.orinda-prose strong {
+  color: var(--orinda-text);
+  font-weight: 650;
+}
+
+.orinda-credentials,
+.orinda-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
-  margin: 1.5rem 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.orinda-credentials {
+  margin-top: 1rem;
+}
+
+.orinda-credentials li,
+.orinda-tags li {
+  border: 1px solid rgba(192, 132, 252, 0.1);
+  border-radius: 999px;
+  color: var(--orinda-accent-bright);
+  background: var(--orinda-accent-soft);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.69rem;
+  line-height: 1;
+}
+
 .orinda-credentials li {
-  padding: 0.34rem 0.7rem;
-  border: 1px solid #d9d3c9;
-  border-radius: 999px;
-  color: #465046;
-  background: rgba(255, 255, 255, 0.56);
-  font-size: 0.78rem;
-  font-weight: 600;
+  padding: 0.55rem 0.72rem;
 }
 
-.orinda-actions {
+.orinda-tags li {
+  padding: 0.43rem 0.62rem;
+}
+
+.orinda-section-heading {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 2rem;
+  margin-bottom: 1.6rem;
+  align-items: end;
+  justify-content: space-between;
 }
 
-.orinda-button {
-  display: inline-flex;
-  min-height: 46px;
-  padding: 0.72rem 1.15rem;
-  border: 1px solid var(--orinda-green-deep);
-  border-radius: 999px;
-  align-items: center;
-  justify-content: center;
-  color: #fff !important;
-  background: var(--orinda-green-deep);
+.orinda-section-heading h2 {
+  margin: 0;
+  color: var(--orinda-text);
+  font-size: 1.42rem;
   font-weight: 650;
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  letter-spacing: -0.02em;
 }
 
-.orinda-button.is-secondary {
-  color: var(--orinda-green-deep) !important;
-  background: transparent;
+.orinda-section-heading > a {
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(192, 132, 252, 0.34);
+  color: var(--orinda-text);
+  font-size: 0.78rem;
+  font-weight: 620;
 }
 
-.orinda-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(46, 58, 49, 0.14);
+.orinda-section-heading > a span,
+.orinda-row h3 span,
+.orinda-project h3 span,
+.orinda-writing h3 span {
+  display: inline-block;
+  color: var(--orinda-accent);
+  transition: transform 160ms ease;
 }
 
-.orinda-focus {
+.orinda-section-heading > a:hover {
+  color: var(--orinda-accent-bright);
+  border-color: var(--orinda-accent-bright);
+}
+
+.orinda-section-heading > a:hover span,
+.orinda-row:hover h3 span,
+.orinda-project:hover h3 span,
+.orinda-writing:hover h3 span {
+  transform: translate(3px, -3px);
+}
+
+.orinda-rows,
+.orinda-projects,
+.orinda-writing-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.orinda-row,
+.orinda-project,
+.orinda-writing {
   position: relative;
-  z-index: 1;
-  padding: 1.5rem;
-  border-radius: var(--orinda-radius);
-  color: #f7f5ef;
-  background: var(--orinda-green-deep);
-  box-shadow: 0 24px 60px rgba(46, 58, 49, 0.18);
+  display: grid;
+  margin: 0 -1.45rem;
+  padding: 1.45rem;
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
 }
 
-.orinda-focus-title {
+.orinda-row {
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.orinda-row:hover,
+.orinda-project:hover,
+.orinda-writing:hover {
+  border-color: rgba(216, 180, 254, 0.08);
+  background: rgba(29, 18, 48, 0.72);
+  box-shadow: 0 18px 42px rgba(2, 0, 8, 0.18);
+}
+
+.orinda-row__index,
+.orinda-project__type,
+.orinda-writing time,
+.orinda-contact__kicker {
+  color: var(--orinda-accent);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+.orinda-row h3,
+.orinda-project h3,
+.orinda-writing h3 {
+  margin: 0 0 0.55rem;
+  color: var(--orinda-text);
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+
+.orinda-row:hover h3,
+.orinda-project:hover h3,
+.orinda-writing:hover h3 {
+  color: var(--orinda-accent-bright);
+}
+
+.orinda-row p,
+.orinda-project > div > p:not(.orinda-project__type),
+.orinda-writing p {
   margin: 0 0 1rem;
-  color: #d9e0d7;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  color: var(--orinda-body);
+  font-size: 0.91rem;
+  line-height: 1.75;
+}
+
+.orinda-project {
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 1.2rem;
+}
+
+.orinda-project__mark {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(192, 132, 252, 0.24);
+  border-radius: 0.7rem;
+  place-items: center;
+  color: var(--orinda-accent-bright);
+  background: rgba(168, 85, 247, 0.08);
+  font-size: 1.1rem;
+}
+
+.orinda-project__type {
+  margin: 0 0 0.5rem;
+}
+
+.orinda-writing {
+  grid-template-columns: 3.8rem minmax(0, 1fr);
+  gap: 1.2rem;
+}
+
+.orinda-writing time {
+  padding-top: 0.15rem;
+}
+
+.orinda-contact {
+  text-align: center;
+}
+
+.orinda-contact__kicker {
+  margin: 0 0 1rem;
   text-transform: uppercase;
 }
 
-.orinda-focus-item {
-  display: grid;
-  grid-template-columns: 2.2rem 1fr;
-  gap: 0.75rem;
-  padding: 0.9rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.orinda-focus-item span {
-  color: var(--orinda-sand);
-  font-size: 0.78rem;
-  font-variant-numeric: tabular-nums;
-}
-
-.orinda-focus-item strong {
-  color: #ffffff;
-  font-size: 0.96rem;
-  font-weight: 560;
-}
-
-.orinda-section {
-  padding: clamp(3.5rem, 7vw, 6.5rem) 0 0;
-}
-
-.orinda-section-head {
-  display: flex;
-  gap: 2rem;
-  align-items: end;
-  justify-content: space-between;
-  margin-bottom: 1.6rem;
-}
-
-.orinda-section h2 {
+.orinda-contact h2 {
   margin: 0;
-  color: var(--orinda-ink);
-  font-size: clamp(1.75rem, 3vw, 2.6rem);
-  letter-spacing: -0.025em;
+  color: var(--orinda-text);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.22;
 }
 
-.orinda-section-copy {
-  max-width: 580px;
-  margin: 0;
-  color: var(--orinda-muted);
+.orinda-contact > p:not(.orinda-contact__kicker, .orinda-mobile-label) {
+  max-width: 29rem;
+  margin: 1.35rem auto 0;
   line-height: 1.8;
 }
 
-.orinda-text-link {
-  flex: none;
-  color: var(--orinda-green-deep) !important;
-  font-weight: 650;
+.orinda-outline-button {
+  display: inline-flex;
+  min-height: 3rem;
+  margin-top: 2rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--orinda-accent);
+  border-radius: 0.45rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--orinda-accent-bright) !important;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.78rem;
 }
 
-.orinda-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+.orinda-outline-button:hover {
+  background: var(--orinda-accent-soft);
+  box-shadow: 0 0 28px rgba(147, 51, 234, 0.09);
+  transform: translateY(-2px);
 }
 
-.orinda-card {
-  min-height: 220px;
-  padding: 1.6rem;
-  border: 1px solid var(--orinda-line);
-  border-radius: var(--orinda-radius);
-  color: var(--orinda-ink) !important;
-  background: var(--orinda-card);
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-}
-
-.orinda-card:hover {
-  transform: translateY(-3px);
-  border-color: #cfc5b6;
-  box-shadow: 0 16px 38px rgba(56, 58, 50, 0.08);
-}
-
-.orinda-card-number {
-  display: block;
-  margin-bottom: 2.3rem;
-  color: var(--orinda-sand);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-}
-
-.orinda-card h3 {
-  margin: 0 0 0.55rem;
-  color: var(--orinda-ink);
-  font-size: 1.2rem;
-}
-
-.orinda-card p {
-  margin: 0;
+.orinda-home-footer {
+  padding: 1.5rem 0 3rem;
+  border: 0;
   color: var(--orinda-muted);
-  line-height: 1.75;
-}
-
-.orinda-tool-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.orinda-tool {
-  display: flex;
-  min-height: 250px;
-  padding: 1.6rem;
-  border-radius: var(--orinda-radius);
-  flex-direction: column;
-  color: #f8f5ef !important;
-  background: var(--orinda-green-deep);
-}
-
-.orinda-tool:nth-child(2) {
-  color: var(--orinda-ink) !important;
-  background: #e9e4d9;
-}
-
-.orinda-tool:nth-child(3) {
-  color: var(--orinda-ink) !important;
-  background: #dce3da;
-}
-
-.orinda-tool-icon {
-  display: grid;
-  width: 2.6rem;
-  height: 2.6rem;
-  margin-bottom: auto;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  place-items: center;
-  opacity: 0.82;
-}
-
-.orinda-tool h3 {
-  margin: 2rem 0 0.55rem;
-  color: inherit;
-  font-size: 1.14rem;
-}
-
-.orinda-tool p {
-  margin: 0;
-  color: inherit;
+  background: transparent !important;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
   line-height: 1.7;
-  opacity: 0.76;
+  text-align: center;
 }
 
-.orinda-post-list {
-  border-top: 1px solid var(--orinda-line);
+.orinda-home-footer p {
+  margin: 0.2rem 0;
 }
 
-.orinda-post {
-  display: grid;
-  grid-template-columns: 8rem minmax(0, 1fr) auto;
-  gap: 1.5rem;
-  align-items: center;
-  padding: 1.45rem 0;
-  border-bottom: 1px solid var(--orinda-line);
-  color: var(--orinda-ink) !important;
+.orinda-home-footer a {
+  color: var(--orinda-accent) !important;
 }
 
-.orinda-post time {
-  color: var(--orinda-muted);
-  font-size: 0.82rem;
-}
-
-.orinda-post h3 {
-  margin: 0 0 0.35rem;
-  color: var(--orinda-ink);
-  font-size: 1.08rem;
-}
-
-.orinda-post p {
-  margin: 0;
-  color: var(--orinda-muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.orinda-post-arrow {
-  color: var(--orinda-sand);
-  font-size: 1.2rem;
-}
-
-.orinda-cta {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: clamp(3.5rem, 7vw, 6.5rem);
-  padding: clamp(2rem, 5vw, 3.5rem);
-  border-radius: calc(var(--orinda-radius) + 4px);
-  color: #fff;
-  background: var(--orinda-green-deep);
-}
-
-.orinda-cta h2 {
-  margin: 0 0 0.55rem;
-  color: #fff;
-}
-
-.orinda-cta p {
-  max-width: 640px;
-  margin: 0;
-  color: #ccd4cb;
-  line-height: 1.75;
-}
-
-.orinda-cta .orinda-button {
-  flex: none;
-  border-color: #e7c5a2;
-  color: var(--orinda-green-deep) !important;
-  background: #e7c5a2;
-}
-
+/* Inner pages retain Chirpy's reading layout with the same purple design system. */
 .orinda-page-intro {
   margin-bottom: 2.5rem;
   padding: 1.5rem 0 2rem;
   border-bottom: 1px solid var(--orinda-line);
-  color: var(--orinda-muted);
+  color: var(--orinda-body);
   font-size: 1.06rem;
   line-height: 1.9;
 }
@@ -422,55 +599,157 @@ main:has(.orinda-home) {
 .orinda-page-card {
   padding: 1.4rem;
   border: 1px solid var(--orinda-line);
-  border-radius: 18px;
-  background: #fff;
+  border-radius: 0.9rem;
+  background: var(--orinda-surface);
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.orinda-page-card:hover {
+  border-color: rgba(192, 132, 252, 0.28);
+  transform: translateY(-2px);
 }
 
 .orinda-page-card h2,
 .orinda-page-card h3 {
   margin-top: 0;
+  color: var(--orinda-text);
 }
 
 .orinda-page-card p:last-child {
   margin-bottom: 0;
 }
 
-@media (max-width: 1199px) {
-  main:has(.orinda-home) {
-    flex-basis: auto;
-    max-width: none;
-  }
+.orinda-post-list {
+  border-top: 1px solid var(--orinda-line);
+}
+
+.orinda-post {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.45rem 0;
+  border-bottom: 1px solid var(--orinda-line);
+  color: var(--orinda-body) !important;
+}
+
+.orinda-post h3 {
+  margin: 0 0 0.35rem;
+  color: var(--orinda-text);
+}
+
+.orinda-post time,
+.orinda-post p {
+  color: var(--orinda-muted);
+}
+
+.orinda-post-arrow {
+  color: var(--orinda-accent);
 }
 
 @media (max-width: 900px) {
-  .orinda-hero,
-  .orinda-tool-grid {
-    grid-template-columns: 1fr;
+  .orinda-shell {
+    display: block;
+    width: min(100% - 3rem, 720px);
   }
 
-  .orinda-focus {
-    max-width: 520px;
+  .orinda-profile {
+    position: relative;
+    height: auto;
+    min-height: 0;
+    padding: 4.5rem 0 1.5rem;
   }
 
-  .orinda-tool {
-    min-height: 210px;
+  .orinda-anchor-nav {
+    display: none;
+  }
+
+  .orinda-socials {
+    margin-top: 2.5rem;
+  }
+
+  .orinda-portfolio-section,
+  .orinda-portfolio-section:first-child {
+    display: block;
+    min-height: 0;
+    padding: 4.5rem 0;
+  }
+
+  .orinda-mobile-label {
+    display: block;
+    margin: 0 0 1.8rem;
   }
 }
 
 @media (max-width: 640px) {
-  .orinda-hero {
-    padding: 2rem 1.35rem;
+  .orinda-home__glow {
+    display: none;
   }
 
-  .orinda-grid,
+  .orinda-shell {
+    width: min(100% - 2.5rem, 36rem);
+  }
+
+  .orinda-profile {
+    padding-top: 3rem;
+  }
+
+  .orinda-profile h1 {
+    font-size: 2.45rem;
+  }
+
+  .orinda-profile__intro {
+    font-size: 0.94rem;
+  }
+
+  .orinda-portfolio-section,
+  .orinda-portfolio-section:first-child {
+    padding: 3.75rem 0;
+  }
+
+  .orinda-section-heading {
+    display: block;
+  }
+
+  .orinda-section-heading .orinda-mobile-label {
+    margin-bottom: 1.5rem;
+  }
+
+  .orinda-section-heading h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .orinda-row,
+  .orinda-project,
+  .orinda-writing {
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+    padding: 1.15rem 0.75rem;
+  }
+
+  .orinda-row {
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+    gap: 0.6rem;
+  }
+
+  .orinda-project {
+    grid-template-columns: 2.7rem minmax(0, 1fr);
+    gap: 0.8rem;
+  }
+
+  .orinda-project__mark {
+    width: 2.45rem;
+    height: 2.45rem;
+    font-size: 0.9rem;
+  }
+
+  .orinda-writing {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
   .orinda-page-grid {
     grid-template-columns: 1fr;
-  }
-
-  .orinda-section-head,
-  .orinda-cta {
-    align-items: flex-start;
-    flex-direction: column;
   }
 
   .orinda-post {
@@ -481,9 +760,19 @@ main:has(.orinda-home) {
   .orinda-post time {
     grid-column: 1 / -1;
   }
-
-  .orinda-cta .orinda-button {
-    width: 100%;
-  }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
