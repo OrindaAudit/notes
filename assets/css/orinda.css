@@ -95,7 +95,8 @@ summary:focus-visible {
 #sidebar .nav-item.active .nav-link { color: var(--orinda-accent); background: var(--orinda-accent-soft); }
 #sidebar .nav-link:hover,
 #sidebar .sidebar-bottom a:hover { color: var(--orinda-accent); background: var(--orinda-accent-soft); }
-#sidebar #avatar { border: 2px solid var(--orinda-accent); box-shadow: 0 0 0 5px var(--orinda-accent-soft); }
+/* The sidebar is text-only; the brand mark remains available on the homepage. */
+#sidebar #avatar { display: none !important; }
 
 #topbar-wrapper { border-bottom: 1px solid var(--orinda-divider); background: var(--topbar-bg); backdrop-filter: blur(12px); }
 .content a:not(.orinda-project, .orinda-writing) { color: var(--orinda-accent); }
@@ -256,7 +257,8 @@ body:has(.orinda-home) main { width: 100%; max-width: none; padding: 0 !importan
 @media (min-width: 761px) {
   /* Align the first content heading with the brand title: the left title sits
      below the 3rem monogram plus its 2rem bottom margin. */
-  .orinda-home #writing {
+  .orinda-home #writing,
+  .orinda-home #projects {
     padding-top: calc(clamp(4.5rem, 9vh, 6.5rem) + 5rem);
     padding-bottom: clamp(4.5rem, 9vh, 6.5rem);
     justify-content: flex-start;
