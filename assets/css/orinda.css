@@ -1,7 +1,8 @@
 ---
 ---
 
-:root {
+:root,
+html[data-bs-theme="light"] {
   --orinda-page: #f2f0ee;
   --orinda-surface: #f2f0ee;
   --orinda-surface-muted: #e0dcd7;
@@ -117,7 +118,7 @@ footer[aria-label="Site Info"] {
 /* Chirpy surface variables cover article chrome, pagination, tag chips,
    search panels and the back-to-top control. The site intentionally has no
    white page surface: every first-party layer uses the warm-grey base. */
-:root {
+html[data-bs-theme="light"] {
   --main-bg: var(--orinda-page);
   --sidebar-bg: var(--orinda-page);
   --topbar-bg: var(--orinda-page);
