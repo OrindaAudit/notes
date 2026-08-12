@@ -126,6 +126,8 @@ html[data-bs-theme="light"] {
   --card-hover-bg: var(--orinda-page);
   --button-bg: var(--orinda-page);
   --kbd-wrap-color: var(--orinda-page);
+  --sidebar-btn-bg: var(--orinda-page);
+  --sidebar-border-color: var(--orinda-divider);
 }
 
 #main-wrapper .container,
@@ -149,6 +151,22 @@ html[data-bs-theme="light"] {
 #back-to-top {
   background: var(--orinda-page) !important;
   box-shadow: none !important;
+}
+
+/* Chirpy renders these two controls from their own surface variables. */
+#sidebar .sidebar-bottom > a,
+#sidebar .sidebar-bottom #mode-toggle,
+#sidebar .sidebar-bottom .icon-border,
+#topbar search,
+#topbar search input,
+#topbar search input:focus {
+  background-color: var(--orinda-page) !important;
+  background: var(--orinda-page) !important;
+  box-shadow: none !important;
+}
+
+#topbar search {
+  border-color: var(--orinda-line) !important;
 }
 
 /* Keep the established homepage structure; only its visual system changes. */
