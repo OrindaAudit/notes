@@ -3,7 +3,7 @@
 
 :root {
   --orinda-page: #f2f0ee;
-  --orinda-surface: #ffffff;
+  --orinda-surface: #f2f0ee;
   --orinda-surface-muted: #e0dcd7;
   --orinda-text: #3a3241;
   --orinda-body: #6f6673;
@@ -78,9 +78,11 @@ summary:focus-visible {
   outline-offset: 3px;
 }
 
-#sidebar {
+#sidebar,
+#sidebar .sidebar-bottom,
+#sidebar .sidebar-bottom .d-flex {
   border-right: 1px solid var(--orinda-divider);
-  background: var(--orinda-surface);
+  background: var(--orinda-page) !important;
 }
 
 #sidebar .site-title,
@@ -96,7 +98,7 @@ summary:focus-visible {
 
 #topbar-wrapper { border-bottom: 1px solid var(--orinda-divider); background: var(--topbar-bg); backdrop-filter: blur(12px); }
 .content a:not(.orinda-project, .orinda-writing) { color: var(--orinda-accent); }
-.card, .post-preview { border-color: var(--orinda-line); background: var(--orinda-surface); }
+.card, .post-preview { border-color: var(--orinda-line); background: var(--orinda-page); }
 
 /* Chirpy's inner-page footer inherits a white surface by default. Keep every
    full-width structural layer on the same warm-grey page background. */
@@ -110,6 +112,42 @@ footer[aria-label="Site Info"] {
 
 #tail-wrapper {
   border-top: 1px solid var(--orinda-divider);
+}
+
+/* Chirpy surface variables cover article chrome, pagination, tag chips,
+   search panels and the back-to-top control. The site intentionally has no
+   white page surface: every first-party layer uses the warm-grey base. */
+:root {
+  --main-bg: var(--orinda-page);
+  --sidebar-bg: var(--orinda-page);
+  --topbar-bg: var(--orinda-page);
+  --card-bg: var(--orinda-page);
+  --card-hover-bg: var(--orinda-page);
+  --button-bg: var(--orinda-page);
+  --kbd-wrap-color: var(--orinda-page);
+}
+
+#main-wrapper .container,
+#main-wrapper > .container,
+#main-wrapper > .container > .row,
+#main-wrapper .content,
+#main-wrapper .post,
+#main-wrapper .post-tail-wrapper,
+#main-wrapper .post-preview,
+#main-wrapper .card,
+#main-wrapper .pagination,
+#main-wrapper .tag,
+#main-wrapper #search-result-wrapper,
+#main-wrapper #search-result-wrapper .content,
+#main-wrapper #search-hints,
+#panel-wrapper,
+#panel-wrapper .panel,
+#panel-wrapper .panel-body,
+#panel-wrapper .panel-heading,
+#topbar,
+#back-to-top {
+  background: var(--orinda-page) !important;
+  box-shadow: none !important;
 }
 
 /* Keep the established homepage structure; only its visual system changes. */
