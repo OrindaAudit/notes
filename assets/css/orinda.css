@@ -179,10 +179,8 @@ body:has(.orinda-home) main { width: 100%; max-width: none; padding: 0 !importan
 .orinda-home__content { display: flex; min-width: 0; flex-direction: column; }
 .orinda-portfolio-section,
 .orinda-portfolio-section:first-child { display: flex; min-height: 100vh; padding: clamp(4.5rem, 9vh, 6.5rem) 0; flex-direction: column; justify-content: center; }
-.orinda-home #about { order: 1; }
-.orinda-home #writing { order: 2; }
-.orinda-home #projects { order: 3; }
-.orinda-home #contact { order: 4; }
+.orinda-home #writing { order: 1; }
+.orinda-home #projects { order: 2; }
 .orinda-mobile-label { display: none; color: var(--orinda-accent); font-family: ui-monospace, Consolas, monospace; font-size: .72rem; font-weight: 700; letter-spacing: .08em; }
 .orinda-mobile-label span { margin-right: .4rem; }
 
@@ -240,7 +238,7 @@ a.orinda-writing:hover { border-color: var(--orinda-accent); box-shadow: var(--o
 .orinda-outline-button { display: inline-flex; min-height: 2.6rem; margin-top: 1rem; padding: 0 1rem; border: 1px solid var(--orinda-accent); border-radius: 8px; align-items: center; color: var(--orinda-accent) !important; font-family: var(--orinda-font-heading); font-size: .88rem; font-weight: 700; }
 .orinda-outline-button:hover { color: #fff !important; background: var(--orinda-accent); box-shadow: var(--orinda-shadow); }
 
-.orinda-home-footer { order: 5; margin: 0; padding: 2rem 0 3rem; border-top: 1px solid var(--orinda-divider); color: var(--orinda-body); background: var(--orinda-page) !important; box-shadow: none !important; font-family: var(--orinda-font-heading); font-size: .78rem; }
+.orinda-home-footer { order: 3; margin: 0; padding: 2rem 0 3rem; border-top: 1px solid var(--orinda-divider); color: var(--orinda-body); background: var(--orinda-page) !important; box-shadow: none !important; font-family: var(--orinda-font-heading); font-size: .78rem; }
 .orinda-home-footer p { margin: .35rem 0; }
 .orinda-home-footer a { color: var(--orinda-accent) !important; }
 

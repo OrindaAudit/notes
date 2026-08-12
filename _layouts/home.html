@@ -14,10 +14,8 @@ layout: default
         <p class="orinda-profile__intro">探索人工智能、智能体与信息技术如何重塑审计方法、工作流程与专业判断。</p>
 
         <nav class="orinda-anchor-nav" aria-label="首页章节导航">
-          <a class="is-active" href="#about" data-section="about"><span>01</span><i></i>关于</a>
-          <a href="#writing" data-section="writing"><span>02</span><i></i>文章</a>
-          <a href="#projects" data-section="projects"><span>03</span><i></i>产品</a>
-          <a href="#contact" data-section="contact"><span>04</span><i></i>联系</a>
+          <a class="is-active" href="#writing" data-section="writing"><span>01</span><i></i>文章</a>
+          <a href="#projects" data-section="projects"><span>02</span><i></i>产品</a>
         </nav>
       </div>
 
@@ -41,6 +39,7 @@ layout: default
     </header>
 
     <div class="orinda-home__content">
+      {% comment %}
       <section id="about" class="orinda-portfolio-section" aria-labelledby="about-title">
         <p class="orinda-mobile-label"><span>01</span> 关于</p>
         <h2 id="about-title" class="visually-hidden">关于 Orinda Audit</h2>
@@ -57,6 +56,7 @@ layout: default
           <li>法律职业资格</li>
         </ul>
       </section>
+      {% endcomment %}
 
       {% comment %} Research content is retained here for future reference but is intentionally not rendered on the homepage. {% endcomment %}
       {% comment %}
@@ -106,8 +106,8 @@ layout: default
 
       <section id="projects" class="orinda-portfolio-section" aria-labelledby="projects-title">
         <div class="orinda-section-heading">
-          <p class="orinda-mobile-label"><span>03</span> 产品</p>
-          <h2 id="projects-title">产品与开源实践</h2>
+          <p class="orinda-mobile-label"><span>02</span> 产品</p>
+          <h2 id="projects-title">产品</h2>
           <a href="{{ '/tools/' | relative_url }}">查看全部项目 <span aria-hidden="true">↗</span></a>
         </div>
 
@@ -164,6 +164,7 @@ layout: default
         </div>
       </section>
 
+      {% comment %}
       <section id="contact" class="orinda-portfolio-section orinda-contact" aria-labelledby="contact-title">
         <p class="orinda-mobile-label"><span>04</span> 联系</p>
         <p class="orinda-contact__kicker">What’s next?</p>
@@ -171,6 +172,7 @@ layout: default
         <p>欢迎就审计数智化研究、技术应用、开源项目与行业实践进行交流。</p>
         <a class="orinda-outline-button" href="{{ '/contact/' | relative_url }}">联系与合作</a>
       </section>
+      {% endcomment %}
 
       <footer class="orinda-home-footer">
         <p>设计灵感来自 <a href="https://brittanychiang.com/" target="_blank" rel="noopener noreferrer">Brittany Chiang</a>，为 Orinda Audit 独立设计与编码。</p>
