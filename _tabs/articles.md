@@ -1,7 +1,7 @@
 ---
 title: 文章
 icon: fas fa-newspaper
-order: 3
+order: 2
 ---
 
 <p class="orinda-page-intro">记录技术实践、行业观察与学术研究。文章按发布日期排列，可通过分类、标签与归档继续浏览。</p>

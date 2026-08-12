@@ -1,10 +1,11 @@
 ---
-title: 工具
+title: 产品
 icon: fas fa-screwdriver-wrench
-order: 4
+order: 3
+permalink: /tools/
 ---
 
-<p class="orinda-page-intro">工具是研究与现场之间的桥梁。这里收录围绕专业翻译、信息整理与审计智能化开发的开源项目。</p>
+<p class="orinda-page-intro">产品是研究与现场之间的桥梁。这里收录围绕专业翻译、信息整理与审计智能化开发的开源项目。</p>
 
 <div class="orinda-page-grid">
   <div class="orinda-page-card">

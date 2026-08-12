@@ -1,7 +1,7 @@
 ---
 title: 联系
 icon: fas fa-envelope
-order: 6
+order: 4
 ---
 
 <p class="orinda-page-intro">欢迎围绕审计数智化研究、技术应用、开源项目与行业实践进行交流。为便于高效沟通，请在来信中简要说明主题与背景。</p>

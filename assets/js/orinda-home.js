@@ -48,4 +48,3 @@
   window.addEventListener('resize', scheduleUpdate, { passive: true });
   updateActiveSection();
 })();
-

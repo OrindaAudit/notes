@@ -8,17 +8,16 @@ layout: default
   <div class="orinda-shell">
     <header class="orinda-profile">
       <div>
-        <a class="orinda-monogram" href="{{ '/' | relative_url }}" aria-label="Orinda Audit 首页">OA</a>
+        <a class="orinda-monogram" href="{{ '/' | relative_url }}" aria-label="Orinda Audit 首页">O</a>
         <h1>Orinda Audit</h1>
         <h2>审计数智化研究与实践</h2>
         <p class="orinda-profile__intro">探索人工智能、智能体与信息技术如何重塑审计方法、工作流程与专业判断。</p>
 
         <nav class="orinda-anchor-nav" aria-label="首页章节导航">
           <a class="is-active" href="#about" data-section="about"><span>01</span><i></i>关于</a>
-          <a href="#research" data-section="research"><span>02</span><i></i>研究</a>
-          <a href="#projects" data-section="projects"><span>03</span><i></i>项目</a>
-          <a href="#writing" data-section="writing"><span>04</span><i></i>文章</a>
-          <a href="#contact" data-section="contact"><span>05</span><i></i>联系</a>
+          <a href="#writing" data-section="writing"><span>02</span><i></i>文章</a>
+          <a href="#projects" data-section="projects"><span>03</span><i></i>产品</a>
+          <a href="#contact" data-section="contact"><span>04</span><i></i>联系</a>
         </nav>
       </div>
 
@@ -58,51 +57,50 @@ layout: default
 
       <section id="research" class="orinda-portfolio-section" aria-labelledby="research-title">
         <div class="orinda-section-heading">
-          <p class="orinda-mobile-label"><span>02</span> 研究</p>
+          <p class="orinda-mobile-label"><span>02</span> 关于</p>
           <h2 id="research-title">核心研究方向</h2>
-          <a href="{{ '/research/' | relative_url }}">完整研究框架 <span aria-hidden="true">↗</span></a>
         </div>
 
         <div class="orinda-rows">
-          <a class="orinda-row" href="{{ '/research/#audit-agent' | relative_url }}">
+          <div class="orinda-row">
             <span class="orinda-row__index">01</span>
             <div>
               <h3>审计智能体 <span aria-hidden="true">↗</span></h3>
               <p>研究智能体在风险识别、程序设计、资料处理、证据整理和质量复核中的任务边界与人机协作机制。</p>
               <ul class="orinda-tags"><li>Agent</li><li>LLM</li><li>Human-in-the-loop</li></ul>
             </div>
-          </a>
-          <a class="orinda-row" href="{{ '/research/#ai-governance' | relative_url }}">
+          </div>
+          <div class="orinda-row">
             <span class="orinda-row__index">02</span>
             <div>
               <h3>AI 审计治理 <span aria-hidden="true">↗</span></h3>
               <p>关注数据安全、模型幻觉、算法偏差、输出复核、责任边界和可追溯性，探索可信 AI 治理框架。</p>
               <ul class="orinda-tags"><li>AI Governance</li><li>Risk</li><li>Traceability</li></ul>
             </div>
-          </a>
-          <a class="orinda-row" href="{{ '/research/#it-audit' | relative_url }}">
+          </div>
+          <div class="orinda-row">
             <span class="orinda-row__index">03</span>
             <div>
               <h3>信息系统审计 <span aria-hidden="true">↗</span></h3>
               <p>连接业务流程、一般控制、应用控制、系统接口和数据可靠性，评估信息技术对财务报告审计的影响。</p>
               <ul class="orinda-tags"><li>IT Audit</li><li>ITGC</li><li>Data</li></ul>
             </div>
-          </a>
-          <a class="orinda-row" href="{{ '/research/#transformation' | relative_url }}">
+          </div>
+          <div class="orinda-row">
             <span class="orinda-row__index">04</span>
             <div>
               <h3>数智化转型 <span aria-hidden="true">↗</span></h3>
               <p>从目的、情境、人员、数据、技术和交互行为出发，研究会计师事务所的能力体系与工作模式变革。</p>
               <ul class="orinda-tags"><li>Transformation</li><li>Human–Data</li><li>Methodology</li></ul>
             </div>
-          </a>
+          </div>
         </div>
       </section>
 
       <section id="projects" class="orinda-portfolio-section" aria-labelledby="projects-title">
         <div class="orinda-section-heading">
-          <p class="orinda-mobile-label"><span>03</span> 项目</p>
-          <h2 id="projects-title">工具与开源实践</h2>
+          <p class="orinda-mobile-label"><span>03</span> 产品</p>
+          <h2 id="projects-title">产品与开源实践</h2>
           <a href="{{ '/tools/' | relative_url }}">查看全部项目 <span aria-hidden="true">↗</span></a>
         </div>
 
@@ -139,7 +137,7 @@ layout: default
 
       <section id="writing" class="orinda-portfolio-section" aria-labelledby="writing-title">
         <div class="orinda-section-heading">
-          <p class="orinda-mobile-label"><span>04</span> 文章</p>
+          <p class="orinda-mobile-label"><span>02</span> 文章</p>
           <h2 id="writing-title">近期写作</h2>
           <a href="{{ '/articles/' | relative_url }}">浏览全部文章 <span aria-hidden="true">↗</span></a>
         </div>
@@ -160,7 +158,7 @@ layout: default
       </section>
 
       <section id="contact" class="orinda-portfolio-section orinda-contact" aria-labelledby="contact-title">
-        <p class="orinda-mobile-label"><span>05</span> 联系</p>
+        <p class="orinda-mobile-label"><span>04</span> 联系</p>
         <p class="orinda-contact__kicker">What’s next?</p>
         <h2 id="contact-title">一起讨论审计的<br>下一种工作方式。</h2>
         <p>欢迎就审计数智化研究、技术应用、开源项目与行业实践进行交流。</p>
