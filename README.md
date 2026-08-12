@@ -1,4 +1,4 @@
-# Orinda Audit
+# Orinda
 
 审计数智化文章与产品发布平台，基于 Jekyll 与 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 构建。
 
