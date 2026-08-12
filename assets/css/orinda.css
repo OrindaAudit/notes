@@ -181,6 +181,17 @@ body:has(.orinda-home) main { width: 100%; max-width: none; padding: 0 !importan
 .orinda-portfolio-section:first-child { display: flex; min-height: 100vh; padding: clamp(4.5rem, 9vh, 6.5rem) 0; flex-direction: column; justify-content: center; }
 .orinda-home #writing { order: 1; }
 .orinda-home #projects { order: 2; }
+
+@media (min-width: 761px) {
+  /* Align the first content heading with the brand title: the left title sits
+     below the 3rem monogram plus its 2rem bottom margin. */
+  .orinda-home #writing {
+    padding-top: calc(clamp(4.5rem, 9vh, 6.5rem) + 5rem);
+    padding-bottom: clamp(4.5rem, 9vh, 6.5rem);
+    justify-content: flex-start;
+  }
+}
+
 .orinda-mobile-label { display: none; color: var(--orinda-accent); font-family: ui-monospace, Consolas, monospace; font-size: .72rem; font-weight: 700; letter-spacing: .08em; }
 .orinda-mobile-label span { margin-right: .4rem; }
 
