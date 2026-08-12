@@ -298,8 +298,8 @@ a.orinda-writing:hover { border-color: var(--orinda-accent); box-shadow: var(--o
 .orinda-project { padding: 1.25rem; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; }
 .orinda-project__mark { display: grid; width: 2.7rem; height: 2.7rem; border-radius: 50%; place-items: center; color: var(--orinda-accent); background: var(--orinda-accent-soft); }
 .orinda-project__type { margin: 0 0 .35rem !important; }
-.orinda-writing { padding: 1.25rem; grid-template-columns: 4.25rem minmax(0, 1fr); gap: 1rem; }
-.orinda-writing time { padding-top: .15rem; }
+.orinda-writing { padding: 1.1rem 1.25rem; grid-template-columns: 3.25rem minmax(0, 1fr); gap: 1rem; }
+.orinda-writing time { display: flex; padding-top: .1rem; flex-direction: column; gap: .2rem; line-height: 1; }
 
 
 .orinda-home-footer { order: 3; margin: 0; padding: 2rem 0 3rem; border-top: 1px solid var(--orinda-divider); color: var(--orinda-body); background: var(--orinda-page) !important; box-shadow: none !important; font-family: var(--orinda-font-heading); font-size: .78rem; }
@@ -347,7 +347,8 @@ a.orinda-writing:hover { border-color: var(--orinda-accent); box-shadow: var(--o
   .orinda-writing { margin-right: -.75rem; margin-left: -.75rem; padding: 1.15rem .75rem; }
   .orinda-project { grid-template-columns: 2.7rem minmax(0, 1fr); gap: .8rem; }
   .orinda-project__mark { width: 2.45rem; height: 2.45rem; font-size: .9rem; }
-  .orinda-writing { grid-template-columns: 1fr; gap: .45rem; }
+  .orinda-writing { grid-template-columns: 1fr; gap: .55rem; }
+  .orinda-writing time { flex-direction: row; gap: .35rem; }
   .orinda-page-grid { grid-template-columns: 1fr; }
   .orinda-post { grid-template-columns: 1fr auto; gap: .5rem 1rem; }
   .orinda-post time { grid-column: 1 / -1; }
