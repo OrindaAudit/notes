@@ -38,7 +38,7 @@ layout: default
         <div class="orinda-writing-list">
           {% for post in site.posts limit: 4 %}
             <a class="orinda-writing" href="{{ post.url | relative_url }}">
-              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y' }}</time>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
               <div>
                 <h3>{{ post.title }} <span aria-hidden="true">↗</span></h3>
                 <p>{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 120 }}</p>
