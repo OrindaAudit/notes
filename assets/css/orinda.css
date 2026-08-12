@@ -98,6 +98,20 @@ summary:focus-visible {
 .content a:not(.orinda-project, .orinda-writing) { color: var(--orinda-accent); }
 .card, .post-preview { border-color: var(--orinda-line); background: var(--orinda-surface); }
 
+/* Chirpy's inner-page footer inherits a white surface by default. Keep every
+   full-width structural layer on the same warm-grey page background. */
+#main-wrapper,
+#tail-wrapper,
+#tail-wrapper > .container,
+footer[aria-label="Site Info"] {
+  background: var(--orinda-page) !important;
+  box-shadow: none !important;
+}
+
+#tail-wrapper {
+  border-top: 1px solid var(--orinda-divider);
+}
+
 /* Keep the established homepage structure; only its visual system changes. */
 body:has(.orinda-home) #sidebar,
 body:has(.orinda-home) #topbar-wrapper,
