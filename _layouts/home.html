@@ -11,141 +11,27 @@ layout: default
         <a class="orinda-monogram" href="{{ '/' | relative_url }}" aria-label="Orinda Audit 首页">O</a>
         <h1>Orinda Audit</h1>
         <h2>审计数智化研究与实践</h2>
-        <p class="orinda-profile__intro">探索人工智能、智能体与信息技术如何重塑审计方法、工作流程与专业判断。</p>
 
-        <nav class="orinda-anchor-nav" aria-label="首页章节导航">
+        <nav class="orinda-anchor-nav" aria-label="首页导航">
           <a class="is-active" href="#writing" data-section="writing"><span>01</span><i></i>文章</a>
           <a href="#projects" data-section="projects"><span>02</span><i></i>产品</a>
         </nav>
       </div>
 
       <div class="orinda-socials" aria-label="外部链接">
-        <a href="https://github.com/OrindaAudit" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fab fa-github" aria-hidden="true"></i>
-        </a>
-        <a href="mailto:johan.micoud@hotmail.com" aria-label="电子邮件">
-          <i class="fas fa-envelope" aria-hidden="true"></i>
-        </a>
-        <a href="{{ '/wechat/' | relative_url }}" aria-label="微信公众号">
-          <i class="fab fa-weixin" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.xiaohongshu.com/user/profile/6844612a000000001b0220e1" target="_blank" rel="noopener noreferrer" aria-label="小红书">
-          <i class="fas fa-book-open" aria-hidden="true"></i>
-        </a>
-        <a href="{{ '/articles/' | relative_url }}" aria-label="文章">
-          <i class="fas fa-rss" aria-hidden="true"></i>
-        </a>
+        <a href="https://github.com/OrindaAudit" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="mailto:johan.micoud@hotmail.com" aria-label="电子邮件"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+        <a href="{{ '/wechat/' | relative_url }}" aria-label="微信公众号"><i class="fab fa-weixin" aria-hidden="true"></i></a>
+        <a href="https://www.xiaohongshu.com/user/profile/6844612a000000001b0220e1" target="_blank" rel="noopener noreferrer" aria-label="小红书"><i class="fas fa-book-open" aria-hidden="true"></i></a>
+        <a href="{{ '/articles/' | relative_url }}" aria-label="文章"><i class="fas fa-rss" aria-hidden="true"></i></a>
       </div>
     </header>
 
     <div class="orinda-home__content">
-      {% comment %}
-      <section id="about" class="orinda-portfolio-section" aria-labelledby="about-title">
-        <p class="orinda-mobile-label"><span>01</span> 关于</p>
-        <h2 id="about-title" class="visually-hidden">关于 Orinda Audit</h2>
-        <div class="orinda-prose">
-          <p>Orinda Audit 是一个聚焦<strong>审计数智化</strong>的研究与实践平台。我关注的不是技术概念本身，而是技术如何真正进入审计现场，服务于风险识别、审计证据与职业判断。</p>
-          <p>目前主要研究<strong>审计智能体、AI 审计治理、信息系统审计</strong>与<strong>会计师事务所数智化转型</strong>。研究之外，我也把成熟的方法转化为工具、模板和可复用工作流。</p>
-          <p>这里持续沉淀长文章、开源项目、论文解读与实践观察，希望在专业要求与技术可能性之间建立一座可靠的桥梁。</p>
-        </div>
-        <ul class="orinda-credentials" aria-label="专业资质">
-          <li>CPA</li>
-          <li>CISA</li>
-          <li>CIA</li>
-          <li>高级会计师</li>
-          <li>法律职业资格</li>
-        </ul>
-      </section>
-      {% endcomment %}
-
-      {% comment %} Research content is retained here for future reference but is intentionally not rendered on the homepage. {% endcomment %}
-      {% comment %}
-      <section id="research" class="orinda-portfolio-section" aria-labelledby="research-title">
-        <div class="orinda-section-heading">
-          <p class="orinda-mobile-label"><span>02</span> 关于</p>
-          <h2 id="research-title">核心研究方向</h2>
-        </div>
-
-        <div class="orinda-rows">
-          <div class="orinda-row">
-            <span class="orinda-row__index">01</span>
-            <div>
-              <h3>审计智能体 <span aria-hidden="true">↗</span></h3>
-              <p>研究智能体在风险识别、程序设计、资料处理、证据整理和质量复核中的任务边界与人机协作机制。</p>
-              <ul class="orinda-tags"><li>Agent</li><li>LLM</li><li>Human-in-the-loop</li></ul>
-            </div>
-          </div>
-          <div class="orinda-row">
-            <span class="orinda-row__index">02</span>
-            <div>
-              <h3>AI 审计治理 <span aria-hidden="true">↗</span></h3>
-              <p>关注数据安全、模型幻觉、算法偏差、输出复核、责任边界和可追溯性，探索可信 AI 治理框架。</p>
-              <ul class="orinda-tags"><li>AI Governance</li><li>Risk</li><li>Traceability</li></ul>
-            </div>
-          </div>
-          <div class="orinda-row">
-            <span class="orinda-row__index">03</span>
-            <div>
-              <h3>信息系统审计 <span aria-hidden="true">↗</span></h3>
-              <p>连接业务流程、一般控制、应用控制、系统接口和数据可靠性，评估信息技术对财务报告审计的影响。</p>
-              <ul class="orinda-tags"><li>IT Audit</li><li>ITGC</li><li>Data</li></ul>
-            </div>
-          </div>
-          <div class="orinda-row">
-            <span class="orinda-row__index">04</span>
-            <div>
-              <h3>数智化转型 <span aria-hidden="true">↗</span></h3>
-              <p>从目的、情境、人员、数据、技术和交互行为出发，研究会计师事务所的能力体系与工作模式变革。</p>
-              <ul class="orinda-tags"><li>Transformation</li><li>Human–Data</li><li>Methodology</li></ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {% endcomment %}
-
-      <section id="projects" class="orinda-portfolio-section" aria-labelledby="projects-title">
-        <div class="orinda-section-heading">
-          <p class="orinda-mobile-label"><span>02</span> 产品</p>
-          <h2 id="projects-title">产品</h2>
-          <a href="{{ '/tools/' | relative_url }}">查看全部项目 <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <div class="orinda-projects">
-          <a class="orinda-project" href="https://github.com/OrindaAudit/GTPS_Translator" target="_blank" rel="noopener noreferrer">
-            <div class="orinda-project__mark"><i class="fas fa-language" aria-hidden="true"></i></div>
-            <div>
-              <p class="orinda-project__type">Desktop Tool · C#</p>
-              <h3>GTPS Translator <span aria-hidden="true">↗</span></h3>
-              <p>面向审计与技术文档的专业翻译工具，让复杂资料处理更高效、更一致。</p>
-              <ul class="orinda-tags"><li>Translation</li><li>Desktop</li><li>Workflow</li></ul>
-            </div>
-          </a>
-          <a class="orinda-project" href="https://github.com/OrindaAudit/audit-digest" target="_blank" rel="noopener noreferrer">
-            <div class="orinda-project__mark"><i class="fas fa-newspaper" aria-hidden="true"></i></div>
-            <div>
-              <p class="orinda-project__type">Automation · Python</p>
-              <h3>Audit Digest <span aria-hidden="true">↗</span></h3>
-              <p>自动汇集、整理与输出审计领域信息，将分散的信息流转化为可持续的知识输入。</p>
-              <ul class="orinda-tags"><li>Automation</li><li>Research</li><li>Content</li></ul>
-            </div>
-          </a>
-          <a class="orinda-project" href="https://github.com/OrindaAudit" target="_blank" rel="noopener noreferrer">
-            <div class="orinda-project__mark"><i class="fab fa-github" aria-hidden="true"></i></div>
-            <div>
-              <p class="orinda-project__type">Open-source Lab</p>
-              <h3>Orinda Audit Lab <span aria-hidden="true">↗</span></h3>
-              <p>持续公开审计数智化实验、原型、桌面工具与工作流，让研究成果可以被验证和复用。</p>
-              <ul class="orinda-tags"><li>Open Source</li><li>Prototype</li><li>Audit Tech</li></ul>
-            </div>
-          </a>
-        </div>
-      </section>
-
       <section id="writing" class="orinda-portfolio-section" aria-labelledby="writing-title">
         <div class="orinda-section-heading">
-          <p class="orinda-mobile-label"><span>02</span> 文章</p>
-          <h2 id="writing-title">近期写作</h2>
+          <p class="orinda-mobile-label"><span>01</span> 文章</p>
+          <h2 id="writing-title">近期文章</h2>
           <a href="{{ '/articles/' | relative_url }}">浏览全部文章 <span aria-hidden="true">↗</span></a>
         </div>
 
@@ -164,14 +50,43 @@ layout: default
         </div>
       </section>
 
-      {% comment %}
-      <section id="contact" class="orinda-portfolio-section orinda-contact" aria-labelledby="contact-title">
-        <p class="orinda-mobile-label"><span>04</span> 联系</p>
-        <p class="orinda-contact__kicker">What’s next?</p>
-        <h2 id="contact-title">一起讨论审计的<br>下一种工作方式。</h2>
-        <p>欢迎就审计数智化研究、技术应用、开源项目与行业实践进行交流。</p>
+      <section id="projects" class="orinda-portfolio-section" aria-labelledby="projects-title">
+        <div class="orinda-section-heading">
+          <p class="orinda-mobile-label"><span>02</span> 产品</p>
+          <h2 id="projects-title">产品</h2>
+          <a href="{{ '/tools/' | relative_url }}">查看全部产品 <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="orinda-projects">
+          <a class="orinda-project" href="https://github.com/OrindaAudit/GTPS_Translator" target="_blank" rel="noopener noreferrer">
+            <div class="orinda-project__mark"><i class="fas fa-language" aria-hidden="true"></i></div>
+            <div>
+              <p class="orinda-project__type">Desktop Tool · C#</p>
+              <h3>GTPS Translator <span aria-hidden="true">↗</span></h3>
+              <p>面向审计与技术文档的专业翻译工具，让复杂资料处理更高效、更一致。</p>
+              <ul class="orinda-tags"><li>Translation</li><li>Desktop</li><li>Workflow</li></ul>
+            </div>
+          </a>
+          <a class="orinda-project" href="https://github.com/OrindaAudit/audit-digest" target="_blank" rel="noopener noreferrer">
+            <div class="orinda-project__mark"><i class="fas fa-newspaper" aria-hidden="true"></i></div>
+            <div>
+              <p class="orinda-project__type">Automation · Python</p>
+              <h3>Audit Digest <span aria-hidden="true">↗</span></h3>
+              <p>自动汇集、整理和输出审计领域信息，将分散的信息流转化为可持续的知识输入。</p>
+              <ul class="orinda-tags"><li>Automation</li><li>Research</li><li>Content</li></ul>
+            </div>
+          </a>
+          <a class="orinda-project" href="https://github.com/OrindaAudit" target="_blank" rel="noopener noreferrer">
+            <div class="orinda-project__mark"><i class="fab fa-github" aria-hidden="true"></i></div>
+            <div>
+              <p class="orinda-project__type">Open-source Lab</p>
+              <h3>Orinda Audit Lab <span aria-hidden="true">↗</span></h3>
+              <p>持续公开审计数智化实验、原型、桌面工具与工作流，让成果能够被验证和复用。</p>
+              <ul class="orinda-tags"><li>Open Source</li><li>Prototype</li><li>Audit Tech</li></ul>
+            </div>
+          </a>
+        </div>
       </section>
-      {% endcomment %}
 
       <footer class="orinda-home-footer">
         <p>设计灵感来自 <a href="https://brittanychiang.com/" target="_blank" rel="noopener noreferrer">Brittany Chiang</a>，为 Orinda Audit 独立设计与编码。</p>

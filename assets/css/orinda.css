@@ -184,14 +184,8 @@ body:has(.orinda-home) main { width: 100%; max-width: none; padding: 0 !importan
 .orinda-mobile-label { display: none; color: var(--orinda-accent); font-family: ui-monospace, Consolas, monospace; font-size: .72rem; font-weight: 700; letter-spacing: .08em; }
 .orinda-mobile-label span { margin-right: .4rem; }
 
-.orinda-prose { max-width: 42rem; }
-.orinda-prose p { margin: 0 0 1.2rem; color: var(--orinda-body); line-height: 1.95; }
-.orinda-prose strong { color: var(--orinda-text); font-family: var(--orinda-font-heading); font-weight: 700; }
-.orinda-credentials,
 .orinda-tags { display: flex; margin: 1.7rem 0 0; padding: 0; flex-wrap: wrap; gap: .55rem; list-style: none; }
-.orinda-credentials li,
 .orinda-tags li { border-radius: 999px; color: var(--orinda-accent-deep); background: var(--orinda-accent-soft); font-family: var(--orinda-font-heading); font-size: .72rem; font-weight: 700; }
-.orinda-credentials li { padding: .38rem .72rem; }
 .orinda-tags li { padding: .27rem .52rem; }
 
 .orinda-section-heading { display: flex; margin-bottom: 1.8rem; align-items: baseline; justify-content: space-between; gap: 1rem; }
@@ -199,27 +193,18 @@ body:has(.orinda-home) main { width: 100%; max-width: none; padding: 0 !importan
 .orinda-section-heading > a { border-bottom: 1px solid var(--orinda-accent); color: var(--orinda-accent); font-family: var(--orinda-font-heading); font-size: .82rem; font-weight: 700; }
 .orinda-section-heading > a:hover { color: var(--orinda-accent-deep); }
 
-.orinda-rows,
 .orinda-projects,
 .orinda-writing-list { display: grid; gap: .85rem; }
-.orinda-row,
 .orinda-project,
 .orinda-writing { border: 1px solid var(--orinda-line); border-radius: 12px; background: var(--orinda-surface); }
-.orinda-row { display: grid; padding: 1.25rem; grid-template-columns: 2.1rem minmax(0, 1fr); gap: 1rem; }
-.orinda-row__index,
 .orinda-project__type,
-.orinda-writing time,
-.orinda-contact__kicker { color: var(--orinda-accent); font-family: ui-monospace, Consolas, monospace; font-size: .72rem; font-weight: 700; letter-spacing: .06em; }
-.orinda-row h3,
+.orinda-writing time { color: var(--orinda-accent); font-family: ui-monospace, Consolas, monospace; font-size: .72rem; font-weight: 700; letter-spacing: .06em; }
 .orinda-project h3,
 .orinda-writing h3 { margin: 0; color: var(--orinda-text); font-size: 1rem; font-weight: 700; line-height: 1.45; }
-.orinda-row h3 span,
 .orinda-project h3 span,
 .orinda-writing h3 span { color: var(--orinda-accent); }
-.orinda-row p,
 .orinda-project > div > p:not(.orinda-project__type),
 .orinda-writing p { margin: .55rem 0 0; color: var(--orinda-body); font-size: .9rem; line-height: 1.75; }
-.orinda-row .orinda-tags,
 .orinda-project .orinda-tags { margin-top: .85rem; }
 
 a.orinda-project,
@@ -232,11 +217,6 @@ a.orinda-writing:hover { border-color: var(--orinda-accent); box-shadow: var(--o
 .orinda-writing { padding: 1.25rem; grid-template-columns: 4.25rem minmax(0, 1fr); gap: 1rem; }
 .orinda-writing time { padding-top: .15rem; }
 
-.orinda-contact { max-width: 42rem; }
-.orinda-contact h2 { margin: .8rem 0 1rem; color: var(--orinda-text); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.2; }
-.orinda-contact > p:not(.orinda-contact__kicker, .orinda-mobile-label) { color: var(--orinda-body); line-height: 1.9; }
-.orinda-outline-button { display: inline-flex; min-height: 2.6rem; margin-top: 1rem; padding: 0 1rem; border: 1px solid var(--orinda-accent); border-radius: 8px; align-items: center; color: var(--orinda-accent) !important; font-family: var(--orinda-font-heading); font-size: .88rem; font-weight: 700; }
-.orinda-outline-button:hover { color: #fff !important; background: var(--orinda-accent); box-shadow: var(--orinda-shadow); }
 
 .orinda-home-footer { order: 3; margin: 0; padding: 2rem 0 3rem; border-top: 1px solid var(--orinda-divider); color: var(--orinda-body); background: var(--orinda-page) !important; box-shadow: none !important; font-family: var(--orinda-font-heading); font-size: .78rem; }
 .orinda-home-footer p { margin: .35rem 0; }
@@ -279,10 +259,8 @@ a.orinda-writing:hover { border-color: var(--orinda-accent); box-shadow: var(--o
   .orinda-section-heading { display: block; }
   .orinda-section-heading .orinda-mobile-label { margin-bottom: 1.5rem; }
   .orinda-section-heading h2 { margin-bottom: .75rem; }
-  .orinda-row,
   .orinda-project,
   .orinda-writing { margin-right: -.75rem; margin-left: -.75rem; padding: 1.15rem .75rem; }
-  .orinda-row { grid-template-columns: 1.8rem minmax(0, 1fr); gap: .6rem; }
   .orinda-project { grid-template-columns: 2.7rem minmax(0, 1fr); gap: .8rem; }
   .orinda-project__mark { width: 2.45rem; height: 2.45rem; font-size: .9rem; }
   .orinda-writing { grid-template-columns: 1fr; gap: .45rem; }
