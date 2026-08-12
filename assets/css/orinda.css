@@ -95,7 +95,7 @@ summary:focus-visible {
 #sidebar #avatar { border: 2px solid var(--orinda-accent); box-shadow: 0 0 0 5px var(--orinda-accent-soft); }
 
 #topbar-wrapper { border-bottom: 1px solid var(--orinda-divider); background: var(--topbar-bg); backdrop-filter: blur(12px); }
-.content a:not(.orinda-row, .orinda-project, .orinda-writing, .orinda-outline-button, .orinda-home-nav__brand, .orinda-home-nav__link) { color: var(--orinda-accent); }
+.content a:not(.orinda-project, .orinda-writing) { color: var(--orinda-accent); }
 .card, .post-preview { border-color: var(--orinda-line); background: var(--orinda-surface); }
 
 /* Keep the established homepage structure; only its visual system changes. */
