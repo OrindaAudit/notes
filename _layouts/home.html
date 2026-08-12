@@ -31,6 +31,9 @@ layout: default
         <a href="{{ '/wechat/' | relative_url }}" aria-label="微信公众号">
           <i class="fab fa-weixin" aria-hidden="true"></i>
         </a>
+        <a href="https://www.xiaohongshu.com/user/profile/6844612a000000001b0220e1" target="_blank" rel="noopener noreferrer" aria-label="小红书">
+          <i class="fas fa-book-open" aria-hidden="true"></i>
+        </a>
         <a href="{{ '/articles/' | relative_url }}" aria-label="文章">
           <i class="fas fa-rss" aria-hidden="true"></i>
         </a>
@@ -55,6 +58,8 @@ layout: default
         </ul>
       </section>
 
+      {% comment %} Research content is retained here for future reference but is intentionally not rendered on the homepage. {% endcomment %}
+      {% comment %}
       <section id="research" class="orinda-portfolio-section" aria-labelledby="research-title">
         <div class="orinda-section-heading">
           <p class="orinda-mobile-label"><span>02</span> 关于</p>
@@ -96,6 +101,8 @@ layout: default
           </div>
         </div>
       </section>
+
+      {% endcomment %}
 
       <section id="projects" class="orinda-portfolio-section" aria-labelledby="projects-title">
         <div class="orinda-section-heading">
