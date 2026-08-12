@@ -110,6 +110,7 @@ summary:focus-visible {
 }
 .icon-house { --orinda-icon-source: url('../icons/house.svg'); }
 .icon-journal-text { --orinda-icon-source: url('../icons/journal-text.svg'); }
+.icon-journals { --orinda-icon-source: url('../icons/journals.svg'); }
 .icon-list { --orinda-icon-source: url('../icons/list.svg'); }
 
 #sidebar .nav-link[href$="/articles/"] > i,
