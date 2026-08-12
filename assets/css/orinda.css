@@ -98,6 +98,37 @@ summary:focus-visible {
 /* The sidebar is text-only; the brand mark remains available on the homepage. */
 #sidebar #avatar { display: none !important; }
 
+/* Icons follow the GT specification: local SVG sources are used as masks so
+   they inherit the active foreground colour instead of a fixed icon colour. */
+.orinda-icon {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+  background: currentColor;
+  mask: var(--orinda-icon-source) center / contain no-repeat;
+  -webkit-mask: var(--orinda-icon-source) center / contain no-repeat;
+}
+.icon-house { --orinda-icon-source: url('../icons/house.svg'); }
+.icon-journal-text { --orinda-icon-source: url('../icons/journal-text.svg'); }
+.icon-list { --orinda-icon-source: url('../icons/list.svg'); }
+
+#sidebar .nav-link[href$="/articles/"] > i,
+#sidebar .nav-link[href$="/tools/"] > i { display: none; }
+#sidebar .nav-link[href$="/articles/"]::before,
+#sidebar .nav-link[href$="/tools/"]::before {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: .78rem;
+  flex: 0 0 auto;
+  content: '';
+  background: currentColor;
+  mask: var(--orinda-sidebar-icon) center / contain no-repeat;
+  -webkit-mask: var(--orinda-sidebar-icon) center / contain no-repeat;
+}
+#sidebar .nav-link[href$="/articles/"] { --orinda-sidebar-icon: url('../icons/journal-text.svg'); }
+#sidebar .nav-link[href$="/tools/"] { --orinda-sidebar-icon: url('../icons/list.svg'); }
+
 #topbar-wrapper { border-bottom: 1px solid var(--orinda-divider); background: var(--topbar-bg); backdrop-filter: blur(12px); }
 .content a:not(.orinda-project, .orinda-writing) { color: var(--orinda-accent); }
 .card, .post-preview { border-color: var(--orinda-line); background: var(--orinda-page); }
